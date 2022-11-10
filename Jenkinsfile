@@ -14,7 +14,8 @@ pipeline
     {
       steps 
       {
-        sh "ng serve --host=0.0.0.0 --disable-host-check"
+        echo "build ready to compile"
+        //sh "ng serve --host=0.0.0.0 --disable-host-check"
       } 
     }
   }
