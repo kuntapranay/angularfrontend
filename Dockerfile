@@ -6,7 +6,7 @@ COPY . /app/
 RUN ls -la
 RUN npm install 
 RUN npm install -g @angular/cli
-
-#RUN  npm start
-#CMD ng config -g cli.warnings.versionMismatch false
+RUN ng build
+WORKDIR /app/dist/angular-frontend
+RUN ls -la #dist/angular-frontend
 ENTRYPOINT ["ng","serve","--host","0.0.0.0","--disable-host-check"]
