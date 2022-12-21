@@ -9,7 +9,11 @@ import { User } from './user';
 export class UserService {
  
   //private baseURL = "http://localhost:8080/api/users";
-  private baseURL = "http://Backend-LB-1549919040.us-east-2.elb.amazonaws.com:8080/api/users";
+  //private baseURL = "http://Backend-LB-1549919040.us-east-2.elb.amazonaws.com:8080/api/users";
+    private baseURL = "http://backend:8080/api/users";
+  //private baseURL = "http://myapp1:8080/api/users";
+  
+  
   constructor(private httpClient : HttpClient) { }
   getUserList(): Observable<User[]>{ console.log(this.baseURL);
     return this.httpClient.get<User[]>(this.baseURL);
